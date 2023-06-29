@@ -25,9 +25,11 @@ app.use('/api/v1/dalle',dalleRoutes);
 // start server
 
 const startServer = async () => {
+ const port = process.env.PORT || 8080; // Use the assigned port from Vercel or fallback to 8080
+
     try {
        connectDB()
-       app.listen(8080, ()=> console.log(`Server is running on port: http://localhost:8080`))
+       app.listen(port, ()=> console.log(`Server is running on port: http://localhost:8080`))
 
     } catch (error) {
         console.log(error)
