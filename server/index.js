@@ -28,7 +28,6 @@ const startServer = async () => {
     try {
        connectDB()
        app.listen(8080, ()=> console.log(`Server is running on port: http://localhost:8080`))
-       console.log(process.env.MONGO_URL?"node" : "no node ");
 
     } catch (error) {
         console.log(error)

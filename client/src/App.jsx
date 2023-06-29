@@ -24,6 +24,41 @@ function App() {
         <Route path="/create-post" element={<CreatePost />}/>
       </Routes>
     </main>
+    <footer className=" bg-gray-800 w-full flex justify-between items-center bg-dark sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">
+    <div className="text-white">
+          <p>&copy; 2023. All rights reserved.</p>
+        </div>
+    <div className="space-x-4">
+          <a
+            href="https://openai.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white"
+          >
+            OpenAI
+          </a>
+          <a
+            href="https://dall-e.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-400 hover:text-white"
+          >
+            DALL-E 2
+          </a>
+          <a
+            href="/how-to-use"
+            className="text-gray-400 hover:text-white"
+          >
+            How to Use This App
+          </a>
+          <a
+            href="/about"
+            className="text-gray-400 hover:text-white"
+          >
+            About Me
+          </a>
+        </div>
+    </footer>
      
     </BrowserRouter>
      

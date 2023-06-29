@@ -55,7 +55,7 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch('https://dalle-arbb.onrender.com/api/v1/post', {
+        const response = await fetch('http://localhost:8080/api/v1/post', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -63,7 +63,8 @@ const CreatePost = () => {
           body: JSON.stringify({ ...form }),
         });
 
-        await response.json();
+        const data = await response.json();
+        console.log(data)
         alert('Success');
         navigate('/');
       } catch (err) {
